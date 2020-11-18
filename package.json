@@ -1,0 +1,25 @@
+{
+    "name": "dreamwiki-syntax",
+    "displayName": "Dreamwiki Syntax",
+    "description": "Syntax highlighting for dreamwiki",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.51.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "dreamwiki",
+            "aliases": ["dreamwiki", "dreamwiki"],
+            "extensions": [".dream"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "dreamwiki",
+            "scopeName": "source.dream",
+            "path": "./syntaxes/dreamwiki.tmLanguage.json"
+        }]
+    }
+}
