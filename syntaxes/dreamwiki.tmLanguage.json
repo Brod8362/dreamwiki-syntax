@@ -24,6 +24,9 @@
 			"include": "#links"
 		},
 		{
+			"include": "#todo"
+		},
+		{
 			"include": "#incomplete_command"
 		}
 	],
@@ -74,6 +77,12 @@
 			"patterns": [{
 				"name": "invalid.illegal.length.dreamwiki",
 				"match": "\\b\\S{41,}\\b"
+			}]
+		},
+		"todo": {
+			"patterns": [{
+				"name": "comment.block.documentation.dreamwiki",
+				"match": "\\^ ?todo ?\\^.*\\^"
 			}]
 		}
 		
