@@ -3,6 +3,7 @@
     "displayName": "Dreamwiki Syntax",
     "description": "Syntax highlighting for dreamwiki",
     "version": "0.0.1",
+    "publisher":"Brod8362",
     "engines": {
         "vscode": "^1.51.0"
     },
