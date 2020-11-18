@@ -1,9 +1,20 @@
 # Change Log
 
-All notable changes to the "dreamwiki-syntax" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
 ## [Unreleased]
 
 - Initial release
+
+## [0.0.1]
+- Basic syntax highlighting
+- Detect capitals, numbers, most tags
+- Auto complete "^"
+
+## [0.0.2]
+- 41+ character word length check
+- Update readme to add install instructions
+
+## [0.0.3]
+- Add todo tag
+
+## [0.0.4]
+- Instead of auto completing ^, offer code snippets for all tags
