@@ -19,6 +19,9 @@
 		},
 		{
 			"include": "#links"
+		},
+		{
+			"include": "#incomplete_command"
 		}
 	],
 	"repository": {
@@ -53,11 +56,18 @@
 			}]
 		},
 		"links": {
-			"patterns:": [{
+			"patterns": [{
+				"name": "string.interpolated.dreamwiki",
+				"match": "[A-Z]"
+			}]
+		},
+		"incomplete_command": {
+			"patterns": [{
 				"name": "invalid.illegal.dreamwiki",
-				"match": "\\w"
+				"match": "(\\^.*)"
 			}]
 		}
+		
 	},
 	"scopeName": "source.dream"
 }
