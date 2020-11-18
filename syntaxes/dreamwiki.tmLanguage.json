@@ -3,7 +3,10 @@
 	"name": "dreamwiki",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#overlength_word"
+		},
+		{
+			"include": "#grimes"
 		},
 		{
 			"include": "#commands"
@@ -25,7 +28,7 @@
 		}
 	],
 	"repository": {
-		"keywords": {
+		"grimes": {
 			"patterns": [{
 				"name": "constant.numeric.dreamwiki",
 				"match": "\\d"
@@ -63,8 +66,14 @@
 		},
 		"incomplete_command": {
 			"patterns": [{
-				"name": "invalid.illegal.dreamwiki",
+				"name": "invalid.illegal.command.dreamwiki",
 				"match": "(\\^.*)"
+			}]
+		},
+		"overlength_word": {
+			"patterns": [{
+				"name": "invalid.illegal.length.dreamwiki",
+				"match": "\\b\\S{41,}\\b"
 			}]
 		}
 		
