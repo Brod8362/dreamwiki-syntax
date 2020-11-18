@@ -1,0 +1,67 @@
+{
+    "Justify Left": {
+        "prefix": ["^jl"],
+        "body": ["^ justify ^ left ^"],
+        "description": "Justify text to the left"
+    },
+    "Justify Right": {
+        "prefix": ["^jr"],
+        "body": ["^ justify ^ right ^"],
+        "description": "Justify text to the right"
+    },
+    "Justify None": {
+        "prefix": ["^jn"],
+        "body": ["^ justify ^ none ^"],
+        "description": "Disable justify"
+    },
+    "Justify Center": {
+        "prefix": ["^jc"],
+        "body": ["^ justify ^ center ^"],
+        "description": "Justify text to the center"
+    },
+    "Justify Auto": {
+        "prefix": ["^ja"],
+        "body": ["^ justify ^ auto ^"],
+        "description": "Auto (default) justify"
+    },
+    "Justify Block": {
+        "prefix": ["^jb"],
+        "body": ["^ justify ^ block ^"],
+        "description": "Block justify"
+    },
+    "Tag Block": {
+        "prefix": ["^tags"],
+        "body": ["^ tags ^ $0 ^"],
+        "description": "Tag block"
+    },
+    "Title Block": {
+        "prefix": ["^title"],
+        "body": ["^ title ^ $0 ^"],
+        "description": "Title block"
+    },
+    "Comment Block": {
+        "prefix": ["^comment"],
+        "body": ["^ comment ^ $0 ^"],
+        "description": "Comment block"
+    },
+    "Jusitfy": {
+      "prefix": ["^justify"],
+      "body": ["^ justify ^ ${1|left,right,none,center,block,auto|} ^"],
+      "description": "Generic justify block"
+    },
+    "Curtains": {
+        "prefix": ["^curtains"],
+        "body": ["^ curtains ^ ${1|random,glow,reverseGlow,zigzag,none,automata|} ^"],
+        "description": "Curtain block"
+    },
+    "Grimes": {
+        "prefix": ["^grimes"],
+        "body": ["^ grimes ^ ${1|stable,unstable|} ^"],
+        "description": "Grimes block"
+    },
+    "Todo Block": {
+        "prefix": ["^todo"],
+        "body": ["^ todo ^ $0 ^"],
+        "description": "Todo block"
+    }
+}

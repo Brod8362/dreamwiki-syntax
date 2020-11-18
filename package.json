@@ -2,25 +2,45 @@
     "name": "dreamwiki-syntax",
     "displayName": "Dreamwiki Syntax",
     "description": "Syntax highlighting for dreamwiki",
-    "version": "0.0.3",
-    "publisher":"Brod8362",
+    "version": "0.0.4",
+    "publisher": "Brod8362",
     "engines": {
         "vscode": "^1.51.0"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/brod8362/dreamwiki-syntax.git"
+    },
     "categories": [
-        "Programming Languages"
+        "Programming Languages",
+        "Snippets"
     ],
     "contributes": {
-        "languages": [{
-            "id": "dreamwiki",
-            "aliases": ["dreamwiki", "dreamwiki"],
-            "extensions": [".dream"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "dreamwiki",
-            "scopeName": "source.dream",
-            "path": "./syntaxes/dreamwiki.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "dreamwiki",
+                "aliases": [
+                    "dreamwiki",
+                    "dreamwiki"
+                ],
+                "extensions": [
+                    ".dream"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "dreamwiki",
+                "scopeName": "source.dream",
+                "path": "./syntaxes/dreamwiki.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "dreamwiki",
+                "path": "./snippets/snippets.json"
+            }
+        ]
     }
 }
