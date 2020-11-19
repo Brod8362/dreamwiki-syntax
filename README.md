@@ -15,7 +15,6 @@ npm install -g vsce
 git clone https://github.com/brod8362/dreamwiki-syntax
 cd dreamwiki-syntax
 vsce package
+code --install-extension dreamwiki-syntax-VERSION.vsix
 ```
-(or just find it in the releases)
- 
-Install in Visual Studio Code via `File > Preferences > Extensions > ... > Install from VSIX...`
+(or just find it in the releases and install in Visual Studio Code via `File > Preferences > Extensions > ... > Install from VSIX...`)

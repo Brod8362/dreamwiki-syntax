@@ -18,3 +18,6 @@
 
 ## [0.0.4]
 - Instead of auto completing ^, offer code snippets for all tags
+
+## [0.0.5]
+- Add functions to generate text boxes and number strings
