@@ -44,7 +44,7 @@ export function activate(context: vscode.ExtensionContext) {
                     return;
                 }
 
-                vscode.window.showWarningMessage(`Inserted number string at cursor`);
+                vscode.window.showInformationMessage(`Inserted number string at cursor`);
                 vscode.window.activeTextEditor?.insertSnippet(new vscode.SnippetString(`${generateNumberString(length, type)}`));
             }, () => { })
         }, () => { });
