@@ -9,83 +9,153 @@
 			"include": "#grimes"
 		},
 		{
-			"include": "#commands"
-		},
-		{
-			"include": "#title"
-		},
-		{
-			"include": "#tags"
-		},
-		{
-			"include": "#comments"
-		},
-		{
 			"include": "#links"
 		},
 		{
-			"include": "#todo"
+			"include": "#overlength_word"
 		},
 		{
-			"include": "#incomplete_command"
+			"include": "#commands"
 		}
 	],
 	"repository": {
 		"grimes": {
-			"patterns": [{
-				"name": "constant.numeric.dreamwiki",
-				"match": "\\d"
-			}]
+			"patterns": [
+				{
+					"name": "constant.numeric.dreamwiki",
+					"match": "\\d"
+				}
+			]
 		},
 		"commands": {
-			"patterns": [{
-				"name": "keyword.command.dreamwiki",
-				"match": "\\^ ?(justify|curtains|grimes|curtainGrimes|secret) ?\\^.*\\^"
-			}]
-		},
-		"title": {
-			"patterns": [{
-				"name": "string.unquoted.dreamwiki",
-				"match": "\\^ ?title ?\\^.*\\^"
-			}]
-		},
-		"tags": {
-			"patterns": [{
-				"name": "entity.name.tag.dreamwiki",
-				"match": "\\^ ?tags ?\\^.*\\^"
-			}]
-		},
-		"comments": {
-			"patterns": [{
-				"name": "comment.line.dreamwiki",
-				"match": "\\^ ?comments? ?\\^.*\\^"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.command.dreamwiki",
+					"begin": "\\^",
+					"end": "\\^ *$",
+					"patterns": [
+						{
+							"include": "#title"
+						},
+						{
+							"include": "#tags"
+						},
+						{
+							"include": "#comments"
+						},
+						{
+							"include": "#justify"
+						},
+						{
+							"include": "#curtains"
+						},
+						{
+							"include": "#secrets"
+						},
+						{
+							"include": "#todo"
+						},
+						{
+							"include": "#grime_command"
+						}
+					],
+					"beginCaptures": {
+						"0": { "name": "punctuation.command.start" }
+					},
+					"endCaptures": {
+						"0": { "name": "punctuation.command.end" }
+					}
+				}
+			]
 		},
 		"links": {
-			"patterns": [{
-				"name": "string.interpolated.dreamwiki",
-				"match": "[A-Z]"
-			}]
+			"patterns": [
+				{
+					"name": "string.interpolated.dreamwiki",
+					"match": "[A-Z]"
+				}
+			]
 		},
 		"incomplete_command": {
-			"patterns": [{
-				"name": "invalid.illegal.command.dreamwiki",
-				"match": "(\\^.*)"
-			}]
+			"patterns": [
+				{
+					"name": "invalid.illegal.command.dreamwiki",
+					"match": "(\\^.*)"
+				}
+			]
 		},
 		"overlength_word": {
-			"patterns": [{
-				"name": "invalid.illegal.length.dreamwiki",
-				"match": "\\b\\S{41,}\\b"
-			}]
+			"patterns": [
+				{
+					"name": "invalid.illegal.length.dreamwiki",
+					"match": "\\b\\S{41,}\\b"
+				}
+			]
+		},
+		"title": {
+			"patterns": [
+				{
+					"name": "string.unquoted.patterns.dreamwiki",
+					"match": " *title *\\^[^\\^]*"
+				}
+			]
+		},
+		"tags": {
+			"patterns": [
+				{
+					"name": "entity.name.tag.dreamwiki",
+					"match": " *tags *\\^[^\\^]*"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.dreamwiki",
+					"match": " *comments? *\\^[^\\^]*"
+				}
+			]
+		},
+		"justify": {
+			"patterns": [
+				{
+					"name": "keyword.command.justify.dreamwiki",
+					"match": " *justify *\\^ *(center|left|right|auto|block|none) *"
+				}
+			]
+		},
+		"grime_command": {
+			"patterns": [
+				{
+					"name": "keyword.command.curtains.dreamwiki",
+					"match": " *grimes *\\^ *(un)?stable *"
+				}
+			]
+		},
+		"curtains": {
+			"patterns": [
+				{
+					"name": "keyword.command.curtains.dreamwiki",
+					"match": " *curtains *\\^ *(random|glow|reverseGlow|zigzag|none|automata) *"
+				}
+			]
+		},
+		"secrets": {
+			"patterns": [
+				{
+					"name": "keyword.command.secret.dreamwiki",
+					"match": " *secret *\\^[^\\^]*"
+				}
+			]
 		},
 		"todo": {
-			"patterns": [{
-				"name": "comment.block.documentation.dreamwiki",
-				"match": "\\^ ?todo ?\\^.*\\^"
-			}]
+			"patterns": [
+				{
+					"name": "comment.block.documentation.dreamwiki",
+					"match": " *todo *\\^[^\\^]*"
+				}
+			]
 		}
-		
 	},
 	"scopeName": "source.dream"
 }
