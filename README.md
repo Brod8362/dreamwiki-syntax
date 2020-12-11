@@ -11,9 +11,10 @@ Will autocomplete ^ and highlights a couple of the different parts of the markup
 ## Build
 Compile extension:
 ```bash
-npm install -g vsce
+npm install -g vsce tsc
 git clone https://github.com/brod8362/dreamwiki-syntax
 cd dreamwiki-syntax
+npm install
 vsce package
 code --install-extension dreamwiki-syntax-VERSION.vsix
 ```

@@ -48,7 +48,7 @@
                 "title": "Dreamwiki: Generate number string"
             },
             {
-                "command":"dreamwiki.generateTextBox",
+                "command": "dreamwiki.generateTextBox",
                 "title": "Dreamwiki: Generate a text box"
             }
         ]
